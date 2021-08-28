@@ -1,8 +1,9 @@
-inherit_from: configs/pointcloud/room_combine.yaml
+inherit_from: configs/pointcloud/test_optim/room_grid64.yaml
 data:
   classes: ['']
+  test_split: test
   path: data/demo/synthetic_room_dataset
-  pointcloud_n: 10000
+  pointcloud_n: 30000
   pointcloud_file: pointcloud
   voxels_file: null
   points_file: null
@@ -10,6 +11,6 @@ data:
 training:
   out_dir: out/demo_syn_room
 test:
-  model_file: https://s3.eu-central-1.amazonaws.com/avg-projects/convolutional_occupancy_networks/models/pointcloud/room_combine.pt
+  model_file: https://s3.eu-central-1.amazonaws.com/avg-projects/convolutional_occupancy_networks/models/pointcloud/room_grid64.pt
 generation:
   generation_dir: generation

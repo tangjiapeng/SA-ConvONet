@@ -7,7 +7,7 @@
 
 This repository contains the implementation of the paper:
 
-Sign-Agnostic CONet: Learning Implicit Surface Reconstructions by Sign-Agnostic Optimization of Convolutional Occupancy Networks
+SA-ConvONet: Sign-Agnostic Optimization of Convolutional Occupancy Network
 **ICCV 2021 (Oral)**  
 
 If you find our code or paper useful, please consider citing

@@ -12,8 +12,8 @@ data:
   pointcloud_chamfer_file: pointcloud.npz
   voxels_file: null
   multi_files: null
-  unit_size: 0.002 # define the size of a voxel, in meter, set 0.02 in ConONet
-  query_vol_size: 25 # query crop in voxel, set 90 in ConvOnet 
+  unit_size: 0.002 # define the size of a voxel, in meter
+  query_vol_size: 25 # query crop in voxel
 model:
   local_coord: True
   encoder: pointnet_crop_local_pool
@@ -47,7 +47,7 @@ test:
   threshold: 0.2 #iso-surface
   eval_mesh: true
   eval_pointcloud: false
-  model_file: room_grid64.pt #model_best.pt
+  model_file: room_grid64.pt #https://s3.eu-central-1.amazonaws.com/avg-projects/convolutional_occupancy_networks/models/pointcloud_crop/room_grid64.pt
 generation:
   generation_dir: generation
   vis_n_outputs: 2
