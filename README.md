@@ -51,6 +51,7 @@ bash scripts/download_demo_data.sh
 ### Reconstruct Large-Scale Matterport3D Scene
 You can now quickly test our code on the real-world scene shown in the teaser. To this end, simply run:
 ```
+python scripts/dataset_matterport/make_cropscene_dataset2.py --in_folder data/demo/Matterport3D_processed --out_folder data/demo/Matterport3D_processed_normalize --do_norm
 python generate_optim_largescene.py configs/pointcloud_crop/demo_matterport.yaml
 ```
 This script should create a folder `out/demo_matterport/generation` where the output meshes and input point cloud are stored.

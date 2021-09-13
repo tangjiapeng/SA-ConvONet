@@ -2,7 +2,7 @@ inherit_from: configs/pointcloud_crop/test_optim/room_grid64_matterport.yaml
 data:
   input_type: pointcloud_crop
   classes: ['']
-  path: data/demo/Matterport3D_processed
+  path: data/demo/Matterport3D_processed_normalize
   pointcloud_n: 65536
   pointcloud_noise: 0.0
   points_subsample: 65536 
