@@ -1,0 +1,67 @@
+method: conv_onet
+data:
+  input_type: pointcloud
+  classes: ['scenes']
+  test_split: test_optim
+  path: data/ScanNet
+  pointcloud_n: 30000 # input points
+  pointcloud_noise: 0 #noise level
+  points_subsample: 2048
+  points_file: null
+  points_iou_file: null
+  pointcloud_file: pointcloud
+  pointcloud_chamfer_file: pointcloud
+  multi_files: 10
+  voxels_file: null
+model:
+  encoder: pointnet_local_pool
+  encoder_kwargs:
+    hidden_dim: 32
+    plane_type: 'grid'
+    grid_resolution: 64
+    unet3d: True
+    unet3d_kwargs:
+      num_levels: 4
+      f_maps: 32
+      in_channels: 32
+      out_channels: 32
+  decoder: simple_local
+  decoder_kwargs:
+    sample_mode: bilinear # bilinear / nearest
+    hidden_size: 32
+  c_dim: 32
+training:
+  out_dir: out/pointcloud/room_grid64_scannet_optim
+  batch_size: 6
+  model_selection_metric: iou
+  model_selection_mode: maximize
+  print_every: 100
+  visualize_every: 10000
+  validate_every: 10000
+  checkpoint_every: 2000
+  backup_every: 10000
+  n_workers: 4
+  n_workers_val: 1
+test:
+  threshold: 0.2 #iso-surface of ConvONet
+  eval_mesh: true
+  eval_pointcloud: false
+  remove_wall: true
+  model_file: model_best.pt
+generation:
+  generation_dir: generation_new
+  vis_n_outputs: 2
+  refine: false
+  n_x: 128
+  n_z: 1
+test_optim:
+  only_ecoder: false
+  learning_rate: 0.00003
+  decay_rate: 0.3
+  n_iter: 720
+  n_step: 300
+  batch_size: 6
+  npoints_surf: 1536
+  npoints_nonsurf: 512
+  sigma: 0.1
+  threshold: [0.4, 0.45, 0.5]

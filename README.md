@@ -148,6 +148,7 @@ To perform sign-agnostic, test-time optimization for more accurate surface mesh 
 ```
 python generate_optim_object.py configs/pointcloud/test_optim/shapenet_3plane.yaml
 python generate_optim_scene.py configs/pointcloud/test_optim/room_grid64.yaml
+python generate_optim_scene.py configs/pointcloud/test_optim/room_grid64_scannet.yaml
 python generate_optim_largescene.py configs/pointcloud_crop/test_optim/room_grid64.yaml
 ```
 
