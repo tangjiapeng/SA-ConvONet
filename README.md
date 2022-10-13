@@ -1,8 +1,8 @@
-# Sign-Agnostic Convolutional Occupancy Networks
-[**Paper**](https://openaccess.thecvf.com/content/ICCV2021/papers/Tang_SA-ConvONet_Sign-Agnostic_Optimization_of_Convolutional_Occupancy_Networks_ICCV_2021_paper.pdf) | [**Supplementary**](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Tang_SA-ConvONet_Sign-Agnostic_Optimization_ICCV_2021_supplemental.pdf) | [**Slides**](http://tangjiapeng.github.io/files/ICCV21_Slides.pdf) | [**Video**](https://www.youtube.com/watch?v=kus2JEgBqQg) | [**Project Page**](https://tangjiapeng.github.io/SA-ConvONet-page/) <br>
+# SA-ConvONet
+[**Paper**](https://openaccess.thecvf.com/content/ICCV2021/papers/Tang_SA-ConvONet_Sign-Agnostic_Optimization_of_Convolutional_Occupancy_Networks_ICCV_2021_paper.pdf) | [**Supplementary**](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Tang_SA-ConvONet_Sign-Agnostic_Optimization_ICCV_2021_supplemental.pdf) | [**Slides**](http://tangjiapeng.github.io/files/ICCV21_Slides.pdf) | [**Video**](https://www.youtube.com/watch?v=kus2JEgBqQg) | [**Project Page**](https://tangjiapeng.github.io/projects/SA-ConvONet/) <br>
 
 <div style="text-align: center">
-<img src="media/teaser_matterport.gif" width="600"/>
+<img src="media/pipeline.png" width="600"/>
 </div>
 
 This repository contains the implementation of the paper:
