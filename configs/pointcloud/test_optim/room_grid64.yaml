@@ -55,7 +55,7 @@ generation:
   n_x: 128
   n_z: 1
 test_optim:
-  only_ecoder: false
+  onlyencoder: false
   learning_rate: 0.00003
   decay_rate: 0.3
   n_iter: 720
